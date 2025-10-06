@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PISANG GILA: Keripik Pisang Premium Kekinian</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure custom font (Inter) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        // Define amber as the primary color for food theme
+                        'primary': {
+                            600: '#D97706', // amber-600
+                            700: '#B45309', // amber-700
+                            50: '#FFFBEB' // amber-50
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Fallback font import */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        /* Custom background gradient for the hero section to look richer */
+        .hero-bg {
+            background: linear-gradient(180deg, rgba(255, 251, 235, 1) 0%, rgba(255, 255, 255, 1) 100%);
+        }
+        /* Style specifically for the logo image: Set max-height to 40px */
+        .logo-img {
+            max-height: 40px; /* Adjusted height to 40px */
+            width: auto;
+        }
+    </style>
+</head>
+<body class="font-sans bg-amber-50 text-gray-800">
+
+    <!-- Navigation Bar -->
+    <header class="bg-white shadow-lg sticky top-0 z-10">
+        <!-- Padding vertikal py-2 membuat header tetap ramping -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex justify-between items-center">
+            <!-- Logo area: Replaced text with image -->
+            <a href="#" class="flex items-center">
+                <!-- Ensure the logo filename matches what you provided, e.g., logo.jpg -->
+                <img src="logo.jpg" alt="Logo PISANG GILA" class="logo-img">
+            </a>
+            <a href="#" class="bg-amber-600 text-white px-5 py-2.5 rounded-full font-bold hover:bg-amber-700 transition duration-150 shadow-md hover:shadow-lg transform hover:scale-105">
+                Hubungi Kami 
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section (More visual impact) -->
+    <main class="hero-bg py-16 md:py-24 border-b border-amber-200">
+        <div class="max-w-6xl mx-auto text-center px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
+            
+            <!-- Text Content -->
+            <div class="md:w-1/2 text-center md:text-left mb-12 md:mb-0">
+                <!-- Headline with soft animation/transition -->
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-gray-900 leading-tight">
+                    Keripik Pisang <span class="text-amber-700 block mt-2">Kelezatan Tanpa Batas.</span>
+                </h1>
+                <!-- Subheading -->
+                <p class="mt-6 text-xl text-gray-600 max-w-lg">
+                    Renyah, gurih, dan penuh rasa! Kami hadirkan keripik pisang dengan resep warisan yang tak terlupakan.
+                </p>
+                <!-- Call to Action (CTA) - Focused on Primary action -->
+                <div class="mt-10 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#pesan-sekarang" class="inline-flex justify-center items-center px-10 py-4 border border-transparent text-xl font-extrabold rounded-full shadow-2xl text-white bg-amber-600 hover:bg-amber-700 transition duration-300 transform hover:scale-105">
+                        Dapatkan Diskon Hari Ini!
+                    </a>
+                </div>
+            </div>
+
+            <!-- Visual Element (1. Hero Image: hero.jpg) -->
+            <div class="md:w-1/2 flex justify-center">
+                 <img id="heroImage" 
+                      src="hero.jpg" 
+                      alt="Ilustrasi Keripik Pisang Premium" 
+                      class="rounded-3xl shadow-2xl transform rotate-3 hover:rotate-0 transition duration-500 w-full max-w-xs md:max-w-md border-4 border-amber-700">
+            </div>
+        </div>
+    </main>
+    
+    <!-- Varian Rasa Section (Product Cards - NEW LOOK) -->
+    <section id="varian" class="bg-gray-50 py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-base text-amber-700 font-bold tracking-widest uppercase">PILIHAN RASA KAMI</h2>
+                <p class="mt-2 text-4xl font-extrabold text-gray-900">4 Varian Terbaik Wajib Coba</p>
+            </div>
+
+            <!-- Varian Grid -->
+            <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+                
+                <!-- Varian 1: Manis Madu -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border-2 border-amber-300 transform hover:shadow-amber-400/50 hover:scale-[1.02] transition duration-300">
+                    <!-- 2. Manis Madu Image: madu.jpg -->
+                    <img id="imageMadu" src="madu.jpg" alt="Varian Rasa Manis Madu" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <span class="inline-block bg-amber-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase">Paling Laris</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">Manis Madu</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Manis natural dari madu murni, lembut dan renyah.</p>
+                        <p class="text-3xl font-extrabold text-amber-700 mb-4">Rp 9.000</p>
+                        <a href="#pesan-sekarang" class="block bg-amber-500 text-white font-semibold py-3 rounded-xl hover:bg-amber-600 transition duration-150">Beli</a>
+                    </div>
+                </div>
+
+                <!-- Varian 2: Cokelat Lumer -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border-2 border-amber-300 transform hover:shadow-amber-400/50 hover:scale-[1.02] transition duration-300">
+                    <!-- 3. Cokelat Lumer Image: cokelat.jpg -->
+                    <img id="imageCokelat" src="cokelat.jpg" alt="Varian Rasa Cokelat Lumer" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <span class="inline-block bg-gray-800 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase">Favorit Anak</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">Cokelat Lumer</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Taburan cokelat Belgia, meleleh di mulut.</p>
+                        <p class="text-3xl font-extrabold text-amber-700 mb-4">Rp 9.500</p>
+                        <a href="#pesan-sekarang" class="block bg-amber-500 text-white font-semibold py-3 rounded-xl hover:bg-amber-600 transition duration-150">Beli</a>
+                    </div>
+                </div>
+
+                <!-- Varian 3: Balado Pedas -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border-2 border-amber-300 transform hover:shadow-amber-400/50 hover:scale-[1.02] transition duration-300">
+                    <!-- 4. Balado Pedas Image: balado.jpg -->
+                    <img id="imageBalado" src="balado.jpg" alt="Varian Rasa Balado Pedas" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <span class="inline-block bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase">Hot & Spicy</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">Balado Pedas</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Pedas manis yang menggigit, bumbu autentik.</p>
+                        <p class="text-3xl font-extrabold text-amber-700 mb-4">Rp 8.500</p>
+                        <a href="#pesan-sekarang" class="block bg-amber-500 text-white font-semibold py-3 rounded-xl hover:bg-amber-600 transition duration-150">Beli</a>
+                    </div>
+                </div>
+
+                <!-- Varian 4: Keju Gurih -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border-2 border-amber-300 transform hover:shadow-amber-400/50 hover:scale-[1.02] transition duration-300">
+                    <!-- 5. Keju Premium Image: keju.jpg -->
+                    <img id="imageKeju" src="keju.jpg" alt="Varian Rasa Keju Gurih" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <span class="inline-block bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase">Gurih Abis</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">Keju Premium</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Taburan keju cheddar asli, asin dan mantap.</p>
+                        <!-- Harga diperbarui ke Rp 10.000 -->
+                        <p class="text-3xl font-extrabold text-amber-700 mb-4">Rp 10.000</p>
+                        <a href="#pesan-sekarang" class="block bg-amber-500 text-white font-semibold py-3 rounded-xl hover:bg-amber-600 transition duration-150">Beli</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA after Varian (Anchor for quick purchase) -->
+            <div id="pesan-sekarang" class="mt-20 text-center p-8 bg-amber-100 rounded-2xl shadow-inner">
+                <h3 class="text-3xl font-bold text-amber-700 mb-4">Siap Mencoba Kerenyahannya?</h3>
+                <a href="#" class="inline-flex justify-center items-center px-12 py-5 border border-transparent text-xl font-bold rounded-full shadow-2xl text-white bg-amber-600 hover:bg-amber-700 transition duration-300 transform hover:scale-105">
+                    Order Via WhatsApp Sekarang! (Fast Response)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keunggulan Section (Original Features) -->
+    <section id="keunggulan" class="bg-white py-16 md:py-24 shadow-inner">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-base text-amber-600 font-bold tracking-widest uppercase">PROSES KAMI</h2>
+                <p class="mt-2 text-4xl font-extrabold text-gray-900">Mengapa Keripik Kami Beda?</p>
+            </div>
+
+            <!-- Feature Grid -->
+            <div class="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Feature 1: Crispy Texture -->
+                <div class="bg-amber-50 p-8 rounded-2xl shadow-xl border-l-4 border-amber-600 hover:bg-amber-100 transition duration-300">
+                    <div class="text-4xl text-amber-700 mb-3">🔪</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Kerenyahan Maksimal</h3>
+                    <p class="text-gray-600">Diiris super tipis dan digoreng dengan metode vakum modern untuk kerenyahan yang garing di setiap gigitan.</p>
+                </div>
+
+                <!-- Feature 2: Local Ingredients -->
+                <div class="bg-amber-50 p-8 rounded-2xl shadow-xl border-l-4 border-amber-600 hover:bg-amber-100 transition duration-300">
+                    <div class="text-4xl text-amber-700 mb-3">🚜</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Bahan Lokal Pilihan</h3>
+                    <p class="text-gray-600">Hanya menggunakan pisang Tanduk atau Kepok kualitas premium, langsung dari kebun petani lokal Indonesia.</p>
+                </div>
+
+                <!-- Feature 3: Unique Flavors -->
+                <div class="bg-amber-50 p-8 rounded-2xl shadow-xl border-l-4 border-amber-600 hover:bg-amber-100 transition duration-300">
+                    <div class="text-4xl text-amber-700 mb-3">🔒</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Kemasan Higienis</h3>
+                    <p class="text-gray-600">Dikemas dengan standar kualitas tinggi, menjamin keripik tetap renyah dan segar saat sampai di tangan Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonial/Callout Section (Stand out more) -->
+    <section class="py-20 md:py-28 bg-amber-700">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-base text-amber-A200 font-bold tracking-widest uppercase mb-4">APA KATA MEREKA?</h2>
+            <blockquote class="text-4xl font-medium italic text-white leading-snug">
+                "Keripik ini bukan hanya enak, tapi bikin nagih total! Rasa Balado Pedasnya pecah di mulut. Selalu jadi camilan andalan saat kerja."
+            </blockquote>
+            <p class="mt-6 text-xl font-semibold text-amber-300">– Rina A., Jakarta (Pengusaha Muda)</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400 text-sm">© 2025 PISANG GILA. Hak Cipta Dilindungi. <span class="font-bold text-amber-400">#PisangGila</span></p>
+            <div class="mt-4 space-x-4 text-xs">
+                <a href="#" class="text-amber-400 hover:text-amber-300">Kebijakan Privasi</a>
+                <span class="text-gray-500">|</span>
+                <a href="#" class="text-amber-400 hover:text-amber-300">Ketentuan Layanan</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
